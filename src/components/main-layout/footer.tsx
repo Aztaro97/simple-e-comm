@@ -33,8 +33,8 @@ export default function Footer() {
             </div>
             <p className="text-xs">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever.Since the 1500s, when an unknown printer.
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              text ever.Since the 1500s, when an unknown printer.
             </p>
           </div>
           <div className="max-w-[221px]">
