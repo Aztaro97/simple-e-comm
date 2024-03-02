@@ -269,7 +269,7 @@ export const Icons = {
       />
     </svg>
   ),
-  cart: ({ ...props }: LucideProps) => (
+  cartCheckout: ({ ...props }: LucideProps) => (
     <svg
       {...props}
       width="18"

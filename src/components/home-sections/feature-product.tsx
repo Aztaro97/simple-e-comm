@@ -12,13 +12,13 @@ export default function FeatureProductSection() {
       <h1 className="text-[2.18rem] text-center mb-6">FEATURED PRODUCTS</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-        {isPending ? (
-          <FeatureProductItem />
-        ) : (
-          productData?.map((product) => (
-            <FeatureProductItem key={product.id} {...product} />
-          ))
-        )}
+        {isPending
+          ? Array.from({ length: 3 }).map((_, index) => (
+              <FeatureProductItem.Skeleton key={index} />
+            ))
+          : productData?.map((product) => (
+              <FeatureProductItem key={product.id} {...product} />
+            ))}
       </div>
       <InputSearch />
     </section>

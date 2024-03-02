@@ -3,19 +3,16 @@
 import React from "react";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { Icons } from "../Icons";
 import { navData } from "@/constants/data";
 import { usePathname } from "next/navigation";
 import { useCartStoreStore } from "@/store/useAddTocartStore";
+import MobileNav from "./mobile-nav";
 
 export default function Header() {
   return (
@@ -115,8 +112,12 @@ const BottomHeader = () => {
   const pathname = usePathname();
 
   return (
-    <div className="justify-end flex mb-3">
-      <NavigationMenu>
+    <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center space-x-2 mb-2 ">
+        <Icons.logo />
+        <span className="text-lg font-bold">E-Comm</span>
+      </div>
+      <NavigationMenu className="hidden md:block">
         <NavigationMenuList className="space-x-0 lg:space-x-5">
           {navData.map((item, index) => (
             <NavigationMenuItem key={index}>
@@ -133,6 +134,8 @@ const BottomHeader = () => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
+
+      <MobileNav />
     </div>
   );
 };

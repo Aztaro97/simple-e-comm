@@ -4,6 +4,7 @@ import { TProduct } from "@/@types";
 import Image from "next/image";
 import React from "react";
 import { Rating } from "react-simple-star-rating";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function FeatureProductItem({ ...product }: TProduct) {
   return (
@@ -35,3 +36,18 @@ export default function FeatureProductItem({ ...product }: TProduct) {
     </div>
   );
 }
+
+FeatureProductItem.Skeleton = function FeatureProductItemSkeleton() {
+  return (
+    <div className="flex space-x-5">
+      <Skeleton className="w-[140px] h-[140px] rounded-sm" />
+      <div>
+        <div className="space-y-3">
+          <Skeleton className="h-4 w-[100px]" />
+          <Skeleton className="h-4 w-[100px]" />
+          <Skeleton className="h-4 w-[100px]" />
+        </div>
+      </div>
+    </div>
+  );
+};

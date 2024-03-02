@@ -6,6 +6,7 @@ interface useCartStoreStoreProps {
 	count: number;
 	addToCart: (item: TProduct) => void;
 	deleteItemById: (itemId: number) => void;
+	totalPrice: number;
 }
 
 export const useCartStoreStore = create<useCartStoreStoreProps>((set) => ({

@@ -130,7 +130,7 @@ export default function CartPage() {
   );
 }
 
-export function VoucherCode() {
+const VoucherCode = () => {
   return (
     <div className="flex w-full max-w-[369px] items-center  space-x-0 my-10">
       <Input
@@ -143,4 +143,4 @@ export function VoucherCode() {
       </Button>
     </div>
   );
-}
+};

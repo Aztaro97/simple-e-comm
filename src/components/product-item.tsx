@@ -29,7 +29,7 @@ export default function ProductItem({ ...item }: TProduct) {
           onClick={() => handleAddToCart(item)}
           className="hover:scale-125 cursor-pointer"
         >
-          <Icons.cart />
+          <Icons.cartCheckout />
         </button>
       </div>
       <Image
